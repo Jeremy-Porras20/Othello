@@ -1,16 +1,18 @@
-import javax.swing.*;
-
+/**
+ * @brief Clase principal del juego Othello.
+ * 
+ * Contiene el método `main` que inicia la aplicación mostrando el menú principal.
+ */
 public class Main
 {
+    /**
+     * @brief Método principal que lanza la aplicación.
+     * 
+     * Crea una instancia del menú inicial donde el jugador puede seleccionar el modo de juego.
+     * 
+     * @param args Argumentos de línea de comandos (no utilizados).
+     */
     public static void main(String[] args) {
-       
-        
-        JuegoOthello juego = new JuegoOthello(new Jugador("jeremy",0), new Jugador("Emily",1),8);
-        juego.iniciarJuego();
-        Tablero tablero = juego.getTablero();
-        TableroPanel tableroPanel = new TableroPanel(tablero,juego); // tablero 8x8
-        GUI interfaz = new GUI(tableroPanel);
-
-    
+        new Menu(); ///< Se inicia el menú principal del juego.
     }
 }
